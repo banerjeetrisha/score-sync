@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <title>CGPA Compass</title>
+</head>
+<body>
+<p class="scale">10 - point scale</p>
+
+<div class="container">
+
+    <h1>ScoreSync</h1>
+
+    <div class="card">
+
+        <div class="badge">CGPA</div>
+
+        <h2>Overall CGPA</h2>
+
+        <p class="desc"> Enter each semester's SGPA and its total credits.</p>
+
+            <div id="semesterContainer">
+
+            <div class="labels">
+                <span>SEMESTER</span>
+                <span>CREDITS</span>
+                <span>SGPA</span>
+            </div>
+
+            <div class="semester-row">
+
+                <input type="text" placeholder="Semester 1">
+
+                <input type="number" placeholder="Credits" class="credit">
+                    
+                <input type="number" placeholder="SGPA" class="sgpa" min="0" max="10" step="0.01">
+
+                <button class="remove-btn">✖</button>
+
+                </div>
+
+            </div>
+
+            <div class="btn-group">
+
+                <button id="addBtn">+ ADD SEMESTER</button>
+
+                <button id="calcBtn">CALCULATE</button>
+
+            </div>
+
+            <h3 id="result"></h3>
+
+        </div>
+
+<div class="card">
+
+    <div class="badge percentage-badge">
+        PERCENTAGE
+    </div>
+
+    <h2>CGPA → Percentage</h2>
+
+    <p class="desc">
+        Convert your CGPA into an equivalent percentage.
+    </p>
+
+    <div class="form-row">
+        <label style="font-size: 20px;">CGPA</label>
+        <input type="number" id="cgpaInput" placeholder="CGPA">
+    </div>
+
+    <button class="action-btn" id="convertBtn">CONVERT</button>
+
+    <h3 id="percentageResult"></h3>
+
+</div>
+
+<div class="card">
+
+    <div class="badge target-badge">
+        TARGET
+    </div>
+
+    <h2>Target SGPA</h2>
+
+    <p class="desc">
+        Find the SGPA you need this semester to hit your target CGPA.
+    </p>
+
+    <div class="form-row">
+        <label style="font-size: 18px;">Current CGPA</label>
+        <input type="number" id="currentCgpa" placeholder="Current CGPA">
+    </div>
+
+    <div class="form-row">
+        <label style="font-size: 18px;">Credits completed so far</label>
+        <input type="number" id="completedCredits" placeholder="Credits till prev sem">
+    </div>
+
+    <div class="form-row">
+        <label style="font-size: 18px;">Credits of this(upcoming) semester</label>
+        <input type="number" id="nextSemCredits" placeholder="Credits of next sem">
+    </div>
+
+    <div class="form-row">
+        <label style="font-size: 18px;">Target overall CGPA</label>
+        <input type="number" id="targetCgpa" placeholder="Targeted CGPA">
+    </div>
+
+    <button class="action-btn" id="targetBtn">CALCULATE</button>
+
+    <h3 id="targetResult"></h3>
+
+</div>
+
+    </div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

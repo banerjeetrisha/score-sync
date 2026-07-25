@@ -1,0 +1,429 @@
+body{
+    margin:0;
+    font-family: "Lucida Sans", Arial, sans-serif;
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        #fcf4e6,
+        #fcf4e6 39px,
+        #e8dfcf 40px
+    );
+}
+
+.scale{
+    color:#971616;
+    font-size:medium;
+    font-weight:bold;
+    display:block;    
+    width:fit-content; 
+    margin:20px auto 0 auto; 
+    padding-bottom:-6px;
+    border-bottom:2px solid #971616;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+h1{
+    text-align:center;
+    color:#132c5c;
+    font-size:38px;
+    margin-top:22px;
+}
+
+.card{
+    position: relative;
+    background: rgba(255, 255, 255, 0.10);
+    width:min(620px, 92vw);
+    box-sizing:border-box;
+    margin:15px auto;
+    margin:15px auto;
+    padding:45px 70px 45px 90px; 
+    border-radius:6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:55px;
+    width:2px;
+    background:#bd7373;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    top:25px;
+    left:18px;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:#e5e5e5;
+    box-shadow:
+        0 80px 0 #e5e5e5,
+        0 160px 0 #e5e5e5,
+        0 240px 0 #e5e5e5;
+}
+
+.badge{
+    display:inline-block;
+    background:#132c5c;
+    color:white;
+    position:absolute;
+    padding:5px 8px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:4px;
+    margin-top:-55px;
+
+    
+}
+
+h2{
+    font-size:25px;
+    color:#132c5c;
+    margin-bottom:-8.5px;
+}
+
+.desc{
+    color:#666;
+    font-size:14.5px;
+    margin-bottom:38px;
+}
+
+.labels{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 50px;
+    gap:15px;
+    align-items:center;
+    color:#666;
+    font-size:18px;
+   font-weight:bold;
+    margin-bottom:10px;
+}
+
+.semester-row{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 50px;
+    gap:20px;
+    align-items:center;
+    margin-bottom:15px;
+
+}
+
+.semester-row input{
+    width:100%;
+    box-sizing:border-box;
+}
+
+.remove-btn{
+    background:#b36d3f;
+    color:white;
+    border:none;
+    width:35px;
+    height:35px;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:bold;
+    padding:2px 10px;
+    flex-shrink: 0;
+}
+
+.remove-btn:hover{
+    background:#b36d3f;
+}
+
+input{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.btn-group{
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+button{
+    border-radius:4px;
+    padding:10px 12px;
+    font-size:12.5px;
+}
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+
+#addBtn{
+    background:white;
+    border:2px solid #132c5c;
+    color:#132c5c;
+    font-weight:bold;
+}
+
+#calcBtn{
+    background:#132c5c;
+    color:white;
+    border:none;
+    font-weight:bold;
+}
+
+#result{
+    margin-top:25px;
+    color:#024359;
+    font-size:22px;
+    font-weight:bold;
+}
+
+#percentageResult{
+    margin-top:25px;
+    color:#cb8c25;
+    font-size:22px;
+    font-weight:bold;
+}
+
+#targetResult{
+    margin-top:25px;
+    color:#d54731;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.form-row{
+    display:flex;
+    align-items:center;
+    margin-bottom:18px;
+    justify-content:space-between;
+}
+
+.form-row label{
+    
+    font-size:16px;
+}
+
+.form-row input,
+.form-row select{
+    width:180px;
+    padding:10px;
+    border:1px solid #ddd;
+    margin-left:20px;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.action-btn{
+    background:#132c5c;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    margin-top:10px;
+    cursor:pointer;
+    font-size:14px ;
+}
+
+.note{
+    margin-top:80px;
+    color:#666;
+    font-size:14px;
+}
+
+.percentage-badge{
+    background:#c89a2b;
+}
+
+.target-badge{
+    background:#b3473f;
+}
+
+label{ 
+    color: #666; 
+    font-weight: bold;
+}
+
+input:focus,
+select:focus{
+    outline: none;
+    border-color: #e9be3d;
+    box-shadow: 0 0 8px rgba(234, 190, 102, 0.3);
+}
+
+@media (max-width: 768px){
+
+    .card{
+        width:92%;
+        padding:40px 20px 30px 45px;
+        box-sizing:border-box;
+    }
+
+    .card::before{
+        left:30px;
+    }
+
+    .card::after{
+        left:10px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    .desc{
+        font-size:14px;
+    }
+
+    .labels{
+        display:none;
+    }
+
+    .semester-row{
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:10px;
+    }
+
+    .semester-row input{
+        width:100%;
+    }
+
+    .remove-btn{
+        width:100%;
+        height:40px;
+    }
+
+    .btn-group{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .btn-group button{
+        width:100%;
+    }
+
+    .form-row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+    .form-row label{
+        margin-bottom:3px;
+    }
+
+    .form-row input,
+    .form-row select{
+        width:100%;
+        margin-left:0;
+        box-sizing:border-box;
+    }
+
+    .action-btn{
+        width:100%;
+    }
+
+    #result,
+    #percentageResult,
+    #targetResult{
+        font-size:20px;
+        line-height:1.4;
+        word-break:break-word;
+    }
+}
+
+@media (max-width: 480px){
+
+    .scale{
+        font-size:14px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+
+    .card{
+        width:95%;
+        padding:35px 15px 25px 40px;
+    }
+
+    .badge{
+        font-size:15px;
+        padding:4px 8px;
+    }
+
+    .desc{
+        font-size:13px;
+        margin-bottom:25px;
+    }
+
+    input{
+        font-size:14px;
+    }
+
+    .semester-row{
+        gap:8px;
+    }
+
+    .btn-group{
+        gap:8px;
+    }
+
+    button{
+        font-size:13px;
+    }
+
+    #result,
+    #percentageResult,
+    #targetResult{
+        font-size:18px;
+    }
+}
+
+@media (max-width: 360px){
+
+    .card{
+        padding:30px 10px 20px 35px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    .badge{
+        font-size:13px;
+    }
+
+    .card::before{
+        left:25px;
+    }
+
+    .card::after{
+        left:8px;
+    }
+}
